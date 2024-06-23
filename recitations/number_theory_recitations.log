@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.3.16)  23 JUN 2024 11:19
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.3.16)  23 JUN 2024 14:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2022,11 +2022,45 @@ LaTeX Info: Redefining \sffamily on input line 117.
 LaTeX Info: Redefining \ttfamily on input line 117.
 Package hyperref Info: bookmark level for unknown exercisechap defaults to 0 on
  input line 123.
+Package hyperref Info: bookmark level for unknown solution defaults to 0 on inp
+ut line 131.
 [2
 
 ]
+LaTeX Info: Redefining \rmfamily on input line 163.
+LaTeX Info: Redefining \sffamily on input line 163.
+LaTeX Info: Redefining \ttfamily on input line 163.
+LaTeX Info: Redefining \rmfamily on input line 163.
+LaTeX Info: Redefining \sffamily on input line 163.
+LaTeX Info: Redefining \ttfamily on input line 163.
+LaTeX Info: Redefining \rmfamily on input line 163.
+LaTeX Info: Redefining \sffamily on input line 163.
+LaTeX Info: Redefining \ttfamily on input line 163.
+LaTeX Info: Redefining \rmfamily on input line 163.
+LaTeX Info: Redefining \sffamily on input line 163.
+LaTeX Info: Redefining \ttfamily on input line 163.
+LaTeX Info: Redefining \rmfamily on input line 224.
+LaTeX Info: Redefining \sffamily on input line 224.
+LaTeX Info: Redefining \ttfamily on input line 224.
+LaTeX Info: Redefining \rmfamily on input line 224.
+LaTeX Info: Redefining \sffamily on input line 224.
+LaTeX Info: Redefining \ttfamily on input line 224.
+ [3] [4]
+LaTeX Info: Redefining \rmfamily on input line 373.
+LaTeX Info: Redefining \sffamily on input line 373.
+LaTeX Info: Redefining \ttfamily on input line 373.
+LaTeX Info: Redefining \rmfamily on input line 373.
+LaTeX Info: Redefining \sffamily on input line 373.
+LaTeX Info: Redefining \ttfamily on input line 373.
+LaTeX Info: Redefining \rmfamily on input line 373.
+LaTeX Info: Redefining \sffamily on input line 373.
+LaTeX Info: Redefining \ttfamily on input line 373.
+LaTeX Info: Redefining \rmfamily on input line 373.
+LaTeX Info: Redefining \sffamily on input line 373.
+LaTeX Info: Redefining \ttfamily on input line 373.
+ [5]
 
-LaTeX Warning: Empty bibliography on input line 195.
+LaTeX Warning: Empty bibliography on input line 506.
 
 \tf@thm=\write8
 \openout8 = `number_theory_recitations.thm'.
@@ -2081,7 +2115,7 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[3] (./number_theory_recitations.aux Setting \if@calendar@hebrew
+[6] (./number_theory_recitations.aux Setting \if@calendar@hebrew
 Setting \if@calendar@hebrew
 LaTeX Info: Redefining \rmfamily on input line 21.
 LaTeX Info: Redefining \sffamily on input line 21.
@@ -2096,12 +2130,12 @@ Package logreq Info: Writing requests to 'number_theory_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43112 strings out of 476191
- 916078 string characters out of 5812072
- 1839339 words of memory out of 5000000
- 63078 multiletter control sequences out of 15000+600000
+ 43113 strings out of 476191
+ 916095 string characters out of 5812072
+ 1850341 words of memory out of 5000000
+ 63079 multiletter control sequences out of 15000+600000
  477240 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 115i,12n,118p,1297b,878s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,19n,118p,1297b,878s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on number_theory_recitations.pdf (7 pages).
+Output written on number_theory_recitations.pdf (10 pages).

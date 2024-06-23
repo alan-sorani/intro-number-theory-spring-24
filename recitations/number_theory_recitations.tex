@@ -127,6 +127,45 @@ $n$.
 \[\text{.} \sqrt[n]{n!} \leq \prod_{p \mid n!} p^{1 / \prs{p-1}}\]
 \end{exercisechap}
 
+\begin{solution}
+לפי תרגיל 6 מהתרגול הקודם,
+\begin{align*}
+\text{.} \ord_p\prs{n!} &= \sum_{k = 1}^{\infty} \floor{\frac{n}{p^k}}
+\end{align*}
+נקבל כי
+\begin{align*}
+\ord_p\prs{n!} &\leq \sum_{k=1}^{\infty} \frac{n}{p^k}
+\\&= n \sum_{k=1}^{\infty} \prs{\frac{1}{p}}^k
+\end{align*}
+וכיוון ש־%
+$p \in \mbb{N}_+$
+ראשוני מתקיים
+$\abs{\frac{1}{p}} < 1$.
+מסכום סדרה הנדסית נקבל כי
+\begin{align*}
+\sum_{k=1}^{\infty} \prs{\frac{1}{p}}^k
+\\&= \frac{1 - \prs{1 - \frac{1}{p}}}{1 - \frac{1}{p}} - 1
+\\&= \frac{\frac{1}{p}}{1 - \frac{1}{p}}
+\\&= \frac{1}{p - 1}
+\end{align*}
+ולכן
+\[\text{.}\ord_p\prs{n!} \leq \frac{n}{p - 1}\]
+
+אז מתקיים גם
+\begin{align*}
+n! &= \prod_{\substack{p \mid n \\ \text{\textenglish{$p$ prime}}}} p^{\ord_p\prs{n!}}
+\\&\leq
+\prod_{\substack{p \mid n \\ \text{\textenglish{$p$ prime}}}} p^{\frac{n}{p-1}}
+\\&\leq
+\prod_{p \mid n} p^{\frac{n}{p-1}}
+\\&=
+\prs{\prod_{p \mid n} p^{\frac{1}{p-1}}}^n
+\end{align*}
+ולכן
+\[\text{,} \sqrt[n]{n!} \leq \prod_{p \mid n} p^{\frac{1}{p-1}}\]
+כנדרש.
+\end{solution}
+
 \begin{exercisechap}[פרק 2, תרגיל 8]
 השתמשו בתוצאת התרגיל הקודם כדי להראות שיש אינסוף ראשוניים.
 
@@ -137,13 +176,69 @@ $\prs{n!}^2 \geq n^n$
 $n \in \mbb{N}_+$.
 \end{exercisechap}
 
+\begin{solution}
+ראשית, נראה כי
+$\prs{n!}^2 \geq n^n$
+לכל
+$n \in \mbb{N}_+$.
+
+מתקיים
+\begin{align*}
+n! &= \prod_{k=0}^{n-1} \prs{k + 1} \\
+n! &= \prod_{k=0}^{n-1} \prs{n - k}
+\end{align*}
+ולכן
+\begin{align*}
+\text{.} \prs{n!}^2 = \prod_{k=0}^{n-1} \prs{k+1}\prs{n-k}
+\end{align*}
+
+נראה כי הגורמים הנסכמים גדולים או שווים ל־%
+$n$.
+כאשר
+$k = 0$
+מתקיים
+$\prs{k+1}\prs{n-k} = n$.
+כאשר
+$0 < k \leq \frac{n}{2}$
+מתקיים
+$n - k \geq \frac{n}{2}$
+ואז
+\[\text{.}\prs{k+1} \prs{n-k} \geq \frac{\prs{k+1} n}{2} \geq \frac{2n}{2} = n\]
+כאשר
+$\frac{n}{2} < k < n-1$
+נקבל כי
+$n - k \geq 2$
+ולכן
+\[\text{.} \prs{k+1}\prs{n-k} > 2 \cdot \frac{n}{2} = n\]
+כאשר
+$k = n-1$
+נקבל
+\[\text{.} \prs{k+1}\prs{n-k} = \prs{n-1+1} \cdot \prs{n-n+1} = n \cdot 1 = n\]
+לכן
+$\prs{n!}^2 \geq \prod_{k=0}^{n-1} n = n^n$,
+כנדרש.
+
+כעת, מהוכחת הסעיף הקודם ניתן לראות כי
+\begin{align*}
+\sqrt[n]{n!} \leq \prod_{\substack{p \mid n! \\ \text{\textenglish{$p$ prime}}}} p^{\frac{1}{p-1}}
+\end{align*}
+ואם נראה שאגף שמאל שואף לאינסוף נקבל שגם אגף ימין שואף לאינסוף, ובפרט שיש אינסוף ראשוניים.
+
+אכן, מכך שמתקיים
+$\prs{n!}^2 \geq n^n$
+נובע כי
+$\sqrt[n]{n!} \geq \sqrt{n}$
+ולכן
+$\lim_{n\to\infty}\sqrt[n]{n!} = \infty$.
+\end{solution}
+
 \begin{exercisechap}[פרק 2, תרגיל 15]
 הראו כי
 \begin{enumerate}[label = (\alph*)]
 \item לכל
 $n \in \mbb{N}_+$
 מתקיים
-\[\text{.} \sum_{d \mid n} \mu\prs{n/d} \sigma\prs{d} = n\]
+\[\text{.} \sum_{d \mid n} \mu\prs{n/d} \nu\prs{d} = 1\]
 \item לכל
 $n \in \mbb{N}_+$
 מתקיים
@@ -151,20 +246,232 @@ $n \in \mbb{N}_+$
 \end{enumerate}
 \end{exercisechap}
 
+\begin{solution}
+ראשית נזכיר כי
+\begin{align*}
+\prs{f * g}\prs{n} \coloneqq \sum_{d \mid n} f\prs{d} g\prs{\frac{n}{d}}
+\end{align*}
+לכל
+$f,g \colon \mbb{N}_+ \to \mbb{C}$,
+וכי ראינו שלכל
+$f$
+כנ"ל מתקיים
+$f = \prs{f * 1} * \mu$.
+
+\begin{enumerate}[label = (\alph*)]
+\item
+מתקיים
+\[\text{,} \sum_{d \mid n} \mu\prs{n/d} \nu\prs{d} = \prs{\nu * \mu}\prs{n}\]
+לכן צריך להראות כי
+$\prs{\nu * \mu}\prs{n} = 1$.
+כיוון שקונוולוציית דיריכלה הינה קומוטטיבית, די להראות כי
+$\prs{\mu * \nu}\prs{n} = 1$,
+כלומר כי
+\[\text{.} \sum_{d \mid n} \mu\prs{d} \nu\prs{n/d} = n\]
+
+יהי
+$n = \prod_{i \in [k]} p_i^{r_i}$
+פירוק של
+$n$
+לראשוניים.
+עבור
+$d \mid n$
+מתקיים כי
+$\mu\prs{d} \neq 0$
+רק עבור
+$d$
+חסר ריבועים.
+במקרה זה
+$d$
+מהצורה
+$\prod_{i \in [k]} p_i^{s_i}$
+עבור
+$s_i \in \set{0,1}$
+ומתקיים
+$\mu\prs{d} = \abs{\set{i}{s_i = 1}}$.
+
+נספור את המחלקים של
+$n$
+שאינם מחלקים את
+$n/d$
+במקרה זה.
+אלו מחלקים
+$e \mid n$
+עבורם קיים
+$i \in [k]$
+כך ש־%
+$s_i = 1$
+וגם
+$\ord_{p_i}\prs{e} = r_i$.
+
+%TODO
+
+\item
+%TODO
+\end{enumerate}
+\end{solution}
+
 \begin{exercisechap}[פרק 2, תרגיל 18]
 הראו כי
 \[\text{.} \forall m,n \in \mbb{N}_+ : \phi\prs{n} \phi\prs{m} = \phi\prs{\gcd\prs{n,m}} \phi\prs{\lcm\prs{n,m}}\]
 \end{exercisechap}
+
+\begin{solution}
+נזכיר כי עבור
+$x = p_1^{a_1} \cdot \ldots p_{\ell}^{a_{\ell}}$
+מתקיים באופן כללי
+\[\text{.} \phi\prs{x} = x \prod_{k \in \brs{\ell}} \prs{1 - \frac{1}{p_k}}\]
+
+יהיו
+\begin{align*}
+n &= \prs{\prod_{i \in \brs{k}} p_i^{\alpha_i}} \prs{\prod_{i \in \brs{\ell}} q_i^{r_i}} \\
+m &= \prs{\prod_{i \in \brs{k}} p_i^{\beta_i}} \prs{\prod_{i \in \brs{\tilde{\ell}}} \tilde{q}_i^{s_i}}
+\end{align*}
+הפירוקים של
+$n,m$
+לראשוניים, כאשר
+$p_1, \ldots, p_k$
+הראשוניים שמחלקים גם את
+$n$
+וגם את
+$m$.
+
+אז
+\begin{align*}
+\phi\prs{n} &= n \prs{\prod_{i \in \brs{k}} \prs{1 - \frac{1}{p_i}}} \prs{\prod_{i \in \brs{\ell}} \prs{1 - \frac{1}{q_i}}}
+\\
+\phi\prs{m} &= m  \prs{\prod_{i \in \brs{k}} \prs{1 - \frac{1}{p_i}}} \prs{\prod_{i \in \brs{\tilde{\ell}}} \prs{1 - \frac{1}{\tilde{q}_i}}}
+\\
+\phi\prs{\gcd\prs{n,m}} &= \gcd\prs{n,m} \prod_{i \in \brs{k}} \prs{1 - \frac{1}{p_i}}
+\\
+\phi\prs{\lcm\prs{n,m}} &= \lcm\prs{n,m} \prs{\prod_{i \in \brs{k}} \prs{1 - \frac{1}{p_i}}} \prs{\prod_{i \in \brs{\ell}} \prs{1 - \frac{1}{q_i}}} \prs{\prod_{i \in \brs{\tilde{\ell}}} \prs{1 - \frac{1}{\tilde{q}_i}}}
+\end{align*}
+וכיוון ש־%
+$\gcd\prs{n,m} \lcm\prs{n,m} = nm$,
+נקבל כי
+\[\text{,}\phi\prs{n} \phi\prs{m} = \phi\prs{\gcd\prs{n,m}} \phi\prs{\lcm\prs{n,m}}\]
+כנדרש.
+\end{solution}
 
 \begin{exercisechap}[פרק 2, תרגיל 19]
 הראו כי
 \[\text{.} \forall m,n \in \mbb{N}_+ : \phi\prs{mn} \phi\prs{\gcd\prs{m,n}} = \gcd\prs{m,n} \phi\prs{m} \phi\prs{n}\]
 \end{exercisechap}
 
+\begin{solution}
+כיוון שראשוני מחלק את
+$mn$
+אם ורק אם הוא מחלק את
+$\lcm\prs{m,n}$,
+נקבל כי
+\begin{align*}
+\frac{\phi\prs{mn}}{mn} &= \prod_{\substack{p \mid mn \\ \text{\textenglish{$p$ prime}}}} \prs{1 - \frac{1}{p}}
+\\&=
+\prod_{\substack{p \mid \lcm\prs{m,n} \\ \text{\textenglish{$p$ prime}}}} \prs{1 - \frac{1}{p}}
+\\&=
+\frac{\phi\prs{\lcm\prs{m,n}}}{\lcm\prs{m,n}} \text{.}
+\end{align*}
+נקבל כי
+\begin{align*}
+\phi\prs{mn} &= \frac{mn}{\lcm\prs{m,n}} \cdot \phi\prs{\lcm\prs{m,n}}
+\\ \text{.}\hphantom{\phi\prs{mn}} &= \gcd\prs{m,n} \phi\prs{\lcm\prs{m,n}}
+\end{align*}
+לכן
+\begin{align*}
+\phi\prs{mn} \phi\prs{\gcd\prs{m,n}} &= \gcd\prs{m,n} \phi\prs{\lcm\prs{m,n}} \phi\prs{\gcd\prs{m,n}}
+\\&= \gcd\prs{m,n} \phi\prs{m} \phi\prs{n}
+\end{align*}
+כאשר בשוויון השני השתמשנו בתרגיל הקודם.
+\end{solution}
+
 \begin{exercisechap}[פרק 2, תרגיל 20]
 הראו כי
 \[\text{.} \prod_{d \mid n} d = n^{\nu\prs{n} / 2}\]
+
+היעזרו בעובדה הבאה:
+$\nu\prs{n}$
+אי־זוגי אם ורק אם
+$n$
+ריבוע.
 \end{exercisechap}
+
+\begin{solution}
+יהי
+$n = \prod_{i \in \brs{k}} p_i^{r_i}$
+פירוק של
+$n$
+לראשוניים.
+
+נניח ראשית כי
+$n = m^2$
+עבור
+$m \in \mbb{N}_+$.
+מתקיים
+\[\text{.} n^{\nu\prs{n} / 2} = \prs{m^2}^{\nu\prs{n} / 2} = m^{\nu\prs{n}}\]
+אז
+\[\text{,} \ord_{p_i} \prs{ n^{\nu\prs{n}/2} } = \nu\prs{n} \cdot \ord_{p_i}\prs{m}\]
+ולכן די להראות כי
+\[\text{.} \ord_{p_i} \prs{\prod_{d \mid n}} = \nu\prs{n} \cdot \ord_{p_i}\prs{m}\]
+כיוון ש־%
+$m^2 = n$,
+מתקיים
+$\ord_{p_i}\prs{n} = 2 \ord_{p_i}\prs{m}$,
+לכן
+$\ord_{p_i}\prs{m} = \frac{\ord_{p_i}{n}}{2}$.
+לכן די להוכיח כי
+\[\text{.} \ord_{p_i} \prs{\prod_{d \mid n} d} = \frac{\nu\prs{n} \cdot \ord_{p_i}\prs{n}}{2}\]
+
+אם
+$n$
+אינו ריבוע,
+$\nu\prs{n}$
+זוגי, ואז
+$\nu\prs{n} / 2$
+שלם. נקבל כי במקרה זה
+\[\text{,}\ord_{p_i}\prs{n^{\nu\prs{n} / 2}} = \frac{\nu\prs{n} \cdot \ord_{p_i}\prs{n}}{2}\]
+ולכן גם במקרה זה די להוכיח כי
+\[\text{.} \ord_{p_i} \prs{\prod_{d \mid n} d} = \frac{\nu\prs{n} \cdot \ord_{p_i}\prs{n}}{2}\]
+
+נקבע
+$i \in \brs{k}$.
+מתקיים
+\begin{align*}
+\text{.} \ord_{p_i} \prs{\prod_{d \mid n} d} = \sum_{d \mid n} \ord_{p_i}\prs{d}
+\end{align*}
+לכל
+$r \in \set{0, \ldots, r_i}$
+נסמן
+\[\text{,} A_r = \set{d}{\substack{d \mid n \\ \ord_{p_i}\prs{d} = r}}\]
+ואז
+\begin{align*}
+\text{.} \set{d}{d \mid n} &= \bigcup_{r = 0}^{r_i} A_r 
+\end{align*}
+כל הקבוצות
+$A_r$
+מאותו גודל, כי עבור בחירת החזקה עבור
+$p_i$
+יש אותו מספר דרכים לבחור את שאר החזקות.
+מתקיים גם
+$\abs{\bigcup_{r = 0}^{r_i} A_r} = \nu\prs{n}$,
+ולכן
+\[\abs{A_r} = \frac{\nu\prs{n}}{r_i + 1}\]
+לכל
+$r \in \set{0, \ldots, r_i}$.
+נקבל
+\begin{align*}
+\sum_{d \mid n} \ord_{p_i}\prs{d} &=
+\sum_{r \in \set{0, \ldots, r_i}} \sum_{d \in A_r} r
+\\&=
+\sum_{r \in \set{0, \ldots, r_i}} \abs{A_r} r
+\\&=
+\frac{\nu\prs{n}}{r_i + 1} \cdot \sum_{r \in \set{0, \ldots, r_i}} r
+\\&= \frac{\nu\prs{n}}{r_i + 1} \cdot \frac{r_i \prs{r_i+1}}{2}
+\\&= \frac{\nu\prs{n} r_i}{2}
+\\&= \frac{\nu\prs{n} \ord_{p_i}\prs{n}}{2}
+\end{align*}
+כנדרש.
+
+\end{solution}
 
 \begin{exercisechap}[פרק 2, תרגיל 23]
 יהי
@@ -191,6 +498,10 @@ $p \in \mbb{N}_+$.
 \end{enumerate}
 
 \end{exercisechap}
+
+\begin{solution}
+%TODO
+\end{solution}
 
 \printbibliography
 \end{document}
