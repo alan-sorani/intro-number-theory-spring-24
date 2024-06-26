@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.3.16)  23 JUN 2024 14:25
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.3.16)  26 JUN 2024 10:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2046,21 +2046,25 @@ LaTeX Info: Redefining \rmfamily on input line 224.
 LaTeX Info: Redefining \sffamily on input line 224.
 LaTeX Info: Redefining \ttfamily on input line 224.
  [3] [4]
-LaTeX Info: Redefining \rmfamily on input line 373.
-LaTeX Info: Redefining \sffamily on input line 373.
-LaTeX Info: Redefining \ttfamily on input line 373.
-LaTeX Info: Redefining \rmfamily on input line 373.
-LaTeX Info: Redefining \sffamily on input line 373.
-LaTeX Info: Redefining \ttfamily on input line 373.
-LaTeX Info: Redefining \rmfamily on input line 373.
-LaTeX Info: Redefining \sffamily on input line 373.
-LaTeX Info: Redefining \ttfamily on input line 373.
-LaTeX Info: Redefining \rmfamily on input line 373.
-LaTeX Info: Redefining \sffamily on input line 373.
-LaTeX Info: Redefining \ttfamily on input line 373.
- [5]
+LaTeX Info: Redefining \rmfamily on input line 380.
+LaTeX Info: Redefining \sffamily on input line 380.
+LaTeX Info: Redefining \ttfamily on input line 380.
+LaTeX Info: Redefining \rmfamily on input line 380.
+LaTeX Info: Redefining \sffamily on input line 380.
+LaTeX Info: Redefining \ttfamily on input line 380.
+LaTeX Info: Redefining \rmfamily on input line 380.
+LaTeX Info: Redefining \sffamily on input line 380.
+LaTeX Info: Redefining \ttfamily on input line 380.
+LaTeX Info: Redefining \rmfamily on input line 380.
+LaTeX Info: Redefining \sffamily on input line 380.
+LaTeX Info: Redefining \ttfamily on input line 380.
+ [5] [6]
+פרק 2.
+[7
 
-LaTeX Warning: Empty bibliography on input line 506.
+] [8]
+
+LaTeX Warning: Empty bibliography on input line 781.
 
 \tf@thm=\write8
 \openout8 = `number_theory_recitations.thm'.
@@ -2115,7 +2119,7 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[6] (./number_theory_recitations.aux Setting \if@calendar@hebrew
+[9] (./number_theory_recitations.aux Setting \if@calendar@hebrew
 Setting \if@calendar@hebrew
 LaTeX Info: Redefining \rmfamily on input line 21.
 LaTeX Info: Redefining \sffamily on input line 21.
@@ -2124,7 +2128,7 @@ LaTeX Info: Redefining \ttfamily on input line 21.
 Setting \if@calendar@hebrew)
 Package rerunfilecheck Info: File `number_theory_recitations.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 7C987773DE6CE7BB12953932AB169A86;497.
+(rerunfilecheck)             Checksum: 781D61978DCEEBACE7F1B66010985D90;867.
 Package logreq Info: Writing requests to 'number_theory_recitations.run.xml'.
 \openout1 = `number_theory_recitations.run.xml'.
 
@@ -2132,10 +2136,10 @@ Package logreq Info: Writing requests to 'number_theory_recitations.run.xml'.
 Here is how much of TeX's memory you used:
  43113 strings out of 476191
  916095 string characters out of 5812072
- 1850341 words of memory out of 5000000
+ 1852732 words of memory out of 5000000
  63079 multiletter control sequences out of 15000+600000
  477240 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,19n,118p,1297b,878s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on number_theory_recitations.pdf (10 pages).
+Output written on number_theory_recitations.pdf (13 pages).

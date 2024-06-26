@@ -262,53 +262,60 @@ $f = \prs{f * 1} * \mu$.
 \item
 מתקיים
 \[\text{,} \sum_{d \mid n} \mu\prs{n/d} \nu\prs{d} = \prs{\nu * \mu}\prs{n}\]
-לכן צריך להראות כי
-$\prs{\nu * \mu}\prs{n} = 1$.
-כיוון שקונוולוציית דיריכלה הינה קומוטטיבית, די להראות כי
-$\prs{\mu * \nu}\prs{n} = 1$,
-כלומר כי
-\[\text{.} \sum_{d \mid n} \mu\prs{d} \nu\prs{n/d} = n\]
-
-יהי
-$n = \prod_{i \in [k]} p_i^{r_i}$
-פירוק של
-$n$
-לראשוניים.
-עבור
-$d \mid n$
-מתקיים כי
-$\mu\prs{d} \neq 0$
-רק עבור
-$d$
-חסר ריבועים.
-במקרה זה
-$d$
-מהצורה
-$\prod_{i \in [k]} p_i^{s_i}$
-עבור
-$s_i \in \set{0,1}$
-ומתקיים
-$\mu\prs{d} = \abs{\set{i}{s_i = 1}}$.
-
-נספור את המחלקים של
-$n$
-שאינם מחלקים את
-$n/d$
-במקרה זה.
-אלו מחלקים
-$e \mid n$
-עבורם קיים
-$i \in [k]$
-כך ש־%
-$s_i = 1$
-וגם
-$\ord_{p_i}\prs{e} = r_i$.
-
-%TODO
+ונשים לב כי
+\[\text{.} \nu\prs{n} = \sum_{d \mid n} 1 = \prs{1 * 1}(n)\]
+אז
+\begin{align*}
+\text{,} \prs{\nu * \mu}\prs{n} = \prs{1 * 1 * \mu}\prs{n} = 1\prs{n} = 1
+\end{align*}
+כנדרש.
 
 \item
-%TODO
+מתקיים
+\begin{align*}
+\text{,} \sum_{d \mid n} \mu\prs{n/d} \sigma\prs{d} = \prs{\sigma * \mu}\prs{n}
+\end{align*}
+ונשים לב כי
+\[\text{.} \sigma\prs{n} = \sum_{d \mid n} d = \prs{\id_{\mbb{N}_+} * 1}\prs{n}\]
+אז
+\begin{align*}
+\text{,} \prs{\sigma * \mu}\prs{n} = \prs{\id_{\mbb{N}_+} * 1 * \mu}\prs{n} = \id_{\mbb{N}_+}\prs{n} = n 
+\end{align*}
+כנדרש.
 \end{enumerate}
+\end{solution}
+
+\begin{exercisechap}[פרק 2, תרגיל 16]
+הראו כי
+$\nu\prs{n}$
+אי־זוגי אם ורק אם
+$n$
+ריבוע.
+\end{exercisechap}
+
+\begin{solution}
+נכתוב
+$n = \prod_{i \in \brs{k}} p_i^{r_i}$.
+ראינו כי אז
+\[\text{.}\nu\prs{n} = \prod_{i \in \brs{k}} \prs{r_i + 1}\]
+מספר זה אי־זוגי אם ורק אם כל ה־%
+$r_i$
+זוגיים, מה שמתקיים אם ורק אם
+$n$
+ריבוע.
+\end{solution}
+
+\begin{exercisechap}[פרק 2, תרגיל 16]
+הראו כי
+$\sigma\prs{n}$
+אי זוגי אם ורק אם
+$n$
+ריבוע או ריבוע כפול
+$2$.
+\end{exercisechap}
+
+\begin{solution}
+
 \end{solution}
 
 \begin{exercisechap}[פרק 2, תרגיל 18]
@@ -383,6 +390,8 @@ $\lcm\prs{m,n}$,
 \end{align*}
 כאשר בשוויון השני השתמשנו בתרגיל הקודם.
 \end{solution}
+
+\chapter{תרגול 3 - עוד פריקות יחידה, וחשבון מודולרי}
 
 \begin{exercisechap}[פרק 2, תרגיל 20]
 הראו כי
@@ -473,34 +482,300 @@ $r \in \set{0, \ldots, r_i}$.
 
 \end{solution}
 
-\begin{exercisechap}[פרק 2, תרגיל 23]
-יהי
-$f \in \mbb{Z}\brs{x}$
-ויהי
-$\psi\prs{n}$
-מספר הערכים
-$f\prs{j}$
-עבור
-$j \in \brs{n}$
-כך ש־%
-$\gcd\prs{f\prs{j},n} = 1$.
-
-\begin{enumerate}[label = (\alph*)]
-\item הראו כי
-$\psi\prs{n}$
-פונקציה כפלית וכי
-$\psi\prs{p^t} = p^{t-1} \psi\prs{p}$
-לכל ראשוני
-$p \in \mbb{N}_+$.
-
-\item הסיקו כי
-\[\text{.} \psi\prs{n} = n \prod_{p \mid n} \frac{\psi\prs{p}}{p}\]
-\end{enumerate}
-
+\begin{exercisechap}[פרק 3, תרגיל 1]
+הראו שיש אינסוף ראשוניים
+$p$
+עבורם
+$p \equiv 5 \mod{6}$.
 \end{exercisechap}
 
 \begin{solution}
-%TODO
+נניח בדרך השלילה שיש מספר סופי של ראשוניים
+$p_1, \ldots, p_\ell$
+עבורם
+$p_i \equiv 5 \mod{6}$.
+
+אם
+$\ell$
+אי־זוגי, נגדיר
+$m = \prod_{i \in \brs{\ell}} p_i + 6$
+ואז
+\[m \equiv \prs{-1}^\ell \equiv -1 \mod{6}\]
+וזה מספר שזר לכל
+$p_i$.
+אבל,
+$ab \equiv -1 \mod{6}$
+גורר שלפחות אחד מבין
+$a,b$
+שווה
+$-1 \mod{6}$.
+מפריקות יחידה, נקבל כי
+$m$
+חייב להתחלק בראשוני ששווה
+$-1 \mod{6}$,
+בסתירה לכך שהוא לא מתחלק באף
+$p_i$.
+
+אם
+$\ell$
+זוגי, נגדיר במקום זאת
+$m = 5 \prod_{i \in \brs{\ell}} p_i + 6$
+ונחזור למקרה הקודם.
+\end{solution}
+
+\begin{exercisechap}[פרק 3, תרגיל 6]
+יהי
+$n > 0$.
+קבוצת מספרים
+$\set{a_1, \ldots, a_{\phi\prs{n}}}$
+נקראת
+\textbf{מערכת שאריות מצומצמת מודולו $n$}
+אם
+$\gcd\prs{a_i, n} = 1$
+לכל
+$i \in \brs{\phi\prs{n}}$
+וגם
+$a_i \not\equiv a_j \mod{n}$
+כאשר
+$i \neq j$.
+
+תהי
+$R \coloneqq \set{a_1, \ldots, a_{\phi\prs{n}}}$
+מערכת שאריות מצומצמת מודולו
+$n$
+ויהי
+$a \in \mbb{Z}$
+עבורו
+$\gcd\prs{a,n} = 1$.
+הראו כי
+$aR \coloneqq \set{a a_1, \ldots, a a_{\phi\prs{n}}}$
+מערכת שאריות מצומצמת מודולו
+$n$.
+\end{exercisechap}
+
+\begin{solution}
+ראשית, נשים לב כי לכל
+$i \in \brs{\phi\prs{n}}$
+מתקיים
+$\gcd\prs{a a_i, n} = 1$
+כי
+$a, a_i$
+שניהם זרים ל־%
+$n$.
+
+נסמן ב־%
+$G \coloneqq \prs{\mbb{Z} / n \mbb{Z}}^\times$
+את קבוצת השאריות מודולו
+$n$
+שזרות ל־%
+$n$,
+ונשים לב\textbackslash%
+ניזכר שקבוצה זאת היא חבורה ביחס לכפל.
+אכן, עבור
+$x \in G$
+כיוון שמתקיים
+$\gcd\prs{x,n} = 1$
+קיימים
+$\alpha, \beta \in \mbb{Z}$
+עבורם
+$\alpha x + \beta n = 1$,
+ואז
+$\alpha x \equiv 1 \mod{n}$,
+כלומר
+$\alpha \equiv x^{-1} \mod{n}$.
+
+בפרט, קיים איבר הופכי ל־%
+$a$
+מודולו
+$n$,
+ואז
+\begin{align*}
+\bar{a}^{-1} \overline{a a_1}, \ldots, \bar{a}^{-1} \overline{a a_{\phi\prs{n}}}
+&=
+\bar{a}^{-1} \bar{a} \bar{a}_1, \ldots, \bar{a}^{-1} \bar{a} \bar{a}_{\phi\prs{n}}
+\\ \text{.}\hphantom{\bar{a}^{-1} \overline{a a_1}, \ldots, \bar{a}^{-1} \overline{a a_{\phi\prs{n}}}} &=
+\bar{a}_1, \ldots, \bar{a}_{\phi\prs{n}}
+\end{align*}
+לכן ההעתקה
+\begin{align*}
+G &\to G \\
+x &\mapsto \bar{a}x
+\end{align*}
+הינה הפיכה, ולכן פרמוטציה. לכן האיברים
+$\bar{a} \bar{a}_1, \ldots, \bar{a} \bar{a}_{\phi\prs{n}}$
+כולם שונים, כנדרש.
+\end{solution}
+
+\begin{exercisechap}[פרק 3, תרגיל 7]
+היעזרו בתרגיל הקודם כדי להוכיח את משפט אוילר,
+$a^{\phi\prs{n}} \equiv 1 \mod{n}$
+כאשר
+$\prs{a,n} = 1$.
+\end{exercisechap}
+
+\begin{solution}
+יהיו
+$a \in \mbb{Z}, n \in \mbb{N}_+$
+עבורם
+$\gcd\prs{a,n} = 1$.
+תהי
+$\bar{a}$
+השארית של
+$a$
+מודולו
+$n$.
+ראינו כי
+$\prs{\mbb{Z} / n\mbb{Z}}^\times$
+חבורה כפלית מסדר
+$\phi\prs{n}$,
+והחזקה של איבר בסדר של החבורה תמיד שווה ליחידה, לכן
+$a^{\phi\prs{n}} \equiv 1 \mod{n}$,
+כנדרש.
+\end{solution}
+
+\begin{exercisechap}[פרק 3, תרגיל 9]
+הראו כי
+$\prs{p-1}! \equiv -1 \mod{p}$
+לכל
+$p \in \mbb{N}_+$
+ראשוני.
+\end{exercisechap}
+
+\begin{solution}
+אם
+$p = 2$,
+הטענה ברורה. לכן נניח
+$p \neq 2$.
+
+הביטוי
+$\prs{p-1}!$
+הוא מכפלת כל האיברים השונים מאפס מודולו
+$p$,
+כלומר איברי
+$\mbb{Z} / p\mbb{Z}$.
+
+כל איבר במכפלה יצתמצם עם ההופכי שלו, אלא אם הוא ההופכי של עצמו.
+האיברים
+$a \in \mbb{Z} / p\mbb{Z}$
+עבורם
+$a = a^{-1}$
+הם אלו עבורם
+$a^2 = 1$.
+אלו שורשי הפולינום
+$x^2 - 1$,
+וכיוון ש־%
+$\mbb{Z} / p\mbb{Z}$
+שדה, יש לפולינום הזה בדיוק שני שורשים
+$\pm 1$.
+
+נקבל כי
+$\prs{p-1}! = -1$.
+\end{solution}
+
+\begin{exercisechap}[פרק 3, תרגיל 10]
+יהי
+$n \in \mbb{N}_+$
+שאינו ראשוני. הראו כי
+\[\prs{n-1}! \equiv 0 \mod{n}\]
+חוץ מכאשר
+$n = 4$.
+\end{exercisechap}
+
+\begin{solution}
+נניח ראשית כי
+$n = 4$.
+אז
+$\prs{n-1}! = 3! = 6 \equiv 2 \mod{4}$.
+
+נניח כעת כי
+$n \neq 4$.
+ניתן לכתוב
+$n = ab$
+עבור
+$a,b \in \set{2, \ldots, n-1}$.
+אם
+$a \neq b$
+נקבל כי
+$a,b$
+שניהם מופיעים כגורמים במכפלה
+$\prs{n-1}!$,
+ולכן
+$n = ab \mid \prs{n-1}!$
+ונקבל כי
+$\prs{n-1}! \equiv 0 \mod{n}$.
+אחרת,
+$n = p^2$
+עבור
+$p$
+ראשוני שונה מ־%
+$2$.
+נקבל כי
+$n = p^2 \mid p \prs{2p} \mid \prs{n-1}!$
+ולכן
+$\prs{n-1}! \equiv 0 \mod{n}$,
+כנדרש.
+\end{solution}
+
+\begin{exercisechap}[פרק 3, תרגיל 11]
+תהי
+$a_1, \ldots, a_{\phi\prs{n}}$
+מערכת שאריות מצומצמת מודלו
+$n$
+ויהי
+$N$
+מספר הפתרונות למשוואה
+$x^2 \equiv 1 \mod{n}$.
+הראו כי
+\[\text{.} a_1 \cdot \ldots \cdot a_{\phi\prs{n}} \equiv \prs{-1}^{N/2} \mod{n}\]
+\end{exercisechap}
+
+\begin{solution}
+ראשית, נשים לב כי
+$N$
+אכן זוגי כי אם
+$a^2 \equiv 1 \mod{n}$
+גם
+$\prs{-a}^2 \equiv 1 \mod{n}$,
+ואם
+$a \equiv -a \mod{n}$
+אז
+$2a \equiv 0 \mod{n}$
+כלומר
+$a$
+לא הפיך ב־%
+$\mbb{Z} / n\mbb{Z}$,
+בסתירה.
+
+כעת, במכפלה
+\[\overline{a_1 \cdot \ldots \cdot a_{\phi\prs{n}}}\]
+מופיעים איברים וההופכיים שלהם, כאשר ב־%
+$N$
+מהאיברים המספר שווה להופכי של עצמו.
+נניח בלי הגבלת הכלליות שאיברים אלו הם
+$a_1, \ldots, a_N$
+ונקבל כי
+\[\text{,} a_1 \cdot \ldots \cdot a_{\phi\prs{n}} \equiv a_1 \cdot \ldots \cdot a_N \mod{n}\]
+כאשר
+$a_i^2 = a_i$
+לכל
+$i \in \brs{N}$.
+
+אם
+$x^2 = 1$,
+גם
+$\prs{-x}^2 = 1$,
+ולכן בביטוי
+$a_1 \cdot \ldots \cdot a_N$
+מופיעות
+$N/2$
+כפולות של איבר והנגדי שלו.
+עבור
+$x$
+כזה מתקיים
+$x \prs{-x} = -x^2 = -1$.
+לכן
+\[\text{,} a_1 \cdot \ldots \cdot a_N \equiv \prs{-1}^{N/2} \mod{n}\]
+כנדרש.
 \end{solution}
 
 \printbibliography
