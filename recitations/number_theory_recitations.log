@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.3.16)  29 JUN 2024 11:20
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.3.16)  30 JUN 2024 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2063,8 +2063,11 @@ LaTeX Info: Redefining \ttfamily on input line 382.
 
 ] [7] [8]
 פרק 3.
+[9
 
-LaTeX Warning: Empty bibliography on input line 783.
+]
+
+LaTeX Warning: Empty bibliography on input line 852.
 
 \tf@thm=\write8
 \openout8 = `number_theory_recitations.thm'.
@@ -2119,24 +2122,16 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[9
-
-] (./number_theory_recitations.aux Setting \if@calendar@hebrew
+[10] (./number_theory_recitations.aux Setting \if@calendar@hebrew
 Setting \if@calendar@hebrew
 LaTeX Info: Redefining \rmfamily on input line 21.
 LaTeX Info: Redefining \sffamily on input line 21.
 LaTeX Info: Redefining \ttfamily on input line 21.
  Setting \if@calendar@hebrew
 Setting \if@calendar@hebrew)
-
-Package rerunfilecheck Warning: File `number_theory_recitations.out' has change
-d.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `number_theory_recitations.out':
-(rerunfilecheck)             Before: 990630DD8F1C8AD7FAA3DF104D54FF1E;867
-(rerunfilecheck)             After:  74C06D8D3DAEDC02DD5CD1E12145A6B9;1120.
+Package rerunfilecheck Info: File `number_theory_recitations.out' has not chang
+ed.
+(rerunfilecheck)             Checksum: 74C06D8D3DAEDC02DD5CD1E12145A6B9;1120.
 Package logreq Info: Writing requests to 'number_theory_recitations.run.xml'.
 \openout1 = `number_theory_recitations.run.xml'.
 
@@ -2144,10 +2139,10 @@ Package logreq Info: Writing requests to 'number_theory_recitations.run.xml'.
 Here is how much of TeX's memory you used:
  43113 strings out of 476191
  916095 string characters out of 5812072
- 1848732 words of memory out of 5000000
+ 1849007 words of memory out of 5000000
  63079 multiletter control sequences out of 15000+600000
  477240 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,19n,118p,1297b,878s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on number_theory_recitations.pdf (13 pages).
+Output written on number_theory_recitations.pdf (14 pages).

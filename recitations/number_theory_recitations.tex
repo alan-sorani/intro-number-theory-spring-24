@@ -635,6 +635,75 @@ $a^{\phi\prs{n}} \equiv 1 \mod{n}$,
 כנדרש.
 \end{solution}
 
+\begin{exercisechap}
+עבור משולש
+$T$
+נסמן את אורכי הצלעות בתור
+$\ell\prs{T}$.
+נגיד כי
+$T$
+\emph{כמעט שווה צלעות}
+אם
+$d\prs{T} = \set{a,a,a \pm 1}$
+עבור
+$n \in \mbb{N}$
+כלשהו.
+
+הראו כי אם
+$T$
+מקיים
+$d\prs{T} = \set{a,a, a \pm 1}$
+עבור
+$a \in \mbb{N}$,
+וגם את זה שהשטח של
+$T$
+שלם,
+אז
+$a$
+אי־זוגי.
+\end{exercisechap}
+
+\begin{solution}
+נסמן
+$b = a \pm 1$
+את אורך הצלע השלישית, ונמקם את הקודקוד שמול הצלע הזאת על הראשית, ואת האנך לצלע על ציר ה־%
+$x$.
+
+אז אורך האנך הוא
+$h = \cos\prs{\alpha} \cdot a$
+כאשר
+$\alpha$
+הזווית מעל ציר ה־%
+$x$
+מקיימת
+$\alpha = \arcsin\prs{\frac{b}{2a}}$.
+נקבל כי
+\begin{align*}
+h &= \cos\prs{\arcsin\prs{\frac{b}{2a}}} \cdot a
+\\&= \sqrt{1 - \sin\prs{\arcsin\prs{\alpha}}^2} \cdot a
+\\\text{.}\hphantom{h}&= \sqrt{a^2 - \prs{\frac{b}{2}}^2}
+\end{align*}
+השטח של
+$T$
+שווה
+\[A = \frac{h \cdot b}{2} = \sqrt{\frac{a^2 b^2}{4} - \prs{\frac{b^2}{4}}^2}\]
+ולכן
+\[\text{.} A^2 = \frac{a^2 b^2}{4} - \prs{\frac{b^2}{4}}^2\]
+נכפול ב־%
+$16$
+ונקבל
+\[\text{.} 16 A^2 = 4 a^2 b^2 - b^4\]
+מוד
+$4$
+נקבל
+\[\text{,} 0 \equiv -b^4 \mod{4}\]
+ולכן
+\[b \equiv 0 \mod{4}\]
+כלומר,
+$b = a \pm 1$
+זוגי.
+\end{solution}
+
 \begin{exercisechap}[פרק 3, תרגיל 9]
 הראו כי
 $\prs{p-1}! \equiv -1 \mod{p}$
