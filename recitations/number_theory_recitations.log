@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.3.16)  30 JUN 2024 12:06
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.3.16)  30 JUN 2024 12:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2067,7 +2067,7 @@ LaTeX Info: Redefining \ttfamily on input line 382.
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 852.
+LaTeX Warning: Empty bibliography on input line 879.
 
 \tf@thm=\write8
 \openout8 = `number_theory_recitations.thm'.
