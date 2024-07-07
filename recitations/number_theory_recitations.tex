@@ -876,5 +876,506 @@ $p$.
 $\sum_{k = 1}^{p-1} \frac{\prs{p-1}!}{k}$.
 \end{solution}
 
+\begin{exercisechap}[פרק 3, תרגיל 17]
+יהי
+$f\prs{x} \in \mbb{Z}\brs{x}$
+ויהי
+\[\text{.} n = p_1^{a_1} \cdot \ldots \cdot p_k^{a_k}\]
+הראו כי למשוואה
+$f\prs{x} \equiv 0 \mod{n}$
+יש פתרון
+אם ורק אם למשוואה
+$f\prs{x} \equiv 0 \mod{p_i^{a_i}}$
+יש פתרון
+לכל
+$i \in \brs{k}$.
+\end{exercisechap}
+
+\begin{solution}
+נניח כי יש ל־%
+$f\prs{x} \equiv 0 \mod{n}$
+פתרון
+$f\prs{s} \equiv 0 \mod{n}$.
+ניקח את המשוואה מוד
+$p_i^{a_i}$
+לכל
+$i \in \brs{k}$
+ונקבל
+$f\prs{s} \equiv 0 \mod{p_i^{a_i}}$.
+
+נניח כעת כי ל־%
+$f\prs{x} \equiv 0 \mod{p_i^{a_i}}$
+יש פתרון לכל
+$i \in \brs{k}$.
+ממשפט השאריות הסיני, כלומר שקיימים
+$s_i \in \mbb{Z}$
+עבורם
+$f\prs{s_i} \equiv 0 \mod{p_i^{a_i}}$.
+ממשפט השאריות הסיני, כיוון ש־%
+$p_i^{a_i}, p_j^{a_j}$
+זרים עבור
+$i \neq j$,
+קיים
+$s \in \mbb{Z}$
+עבורו
+$s \equiv s_i \mod{p_i^{a_i}}$
+לכל
+$i \in \brs{k}$.
+אז
+\[\text{,} f\prs{s} \equiv f\prs{s_i} \mod{p_i^{a_i}} \equiv 0 \mod{p_i^{a_i}}\]
+לכל
+$i \in \brs{k}$.
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$f\prs{x} \in \mbb{Z}\brs{x}$
+ויהי
+\[\text{.} n = p_1^{a_1} \cdot \ldots \cdot p_k^{a_k}\]
+יהי
+$N$
+מספר הפתרונות של
+$f\prs{x} \equiv 0 \mod{n}$
+ויהיו
+$N_i$
+מספר הפתרונות של
+$f\prs{x} \equiv 0 \mod{p_i^{a_i}}$.
+הראו כי
+\[\text{.} N = \prod_{i \in \brs{k}} N_i\]
+\end{exercisechap}
+
+\begin{solution}
+בתרגיל הקודם בנינו התאמה חד־חד ערכית ועל בין פתרונות
+$f\prs{s} \equiv 0 \mod{n}$
+לבין
+$\prs{s_1, \ldots, s_k}$
+כך ש־%
+$f\prs{s_i} \equiv 0 \mod{p_i^{a_i}}$.
+מספר הדרכים לבחור פתרונות
+$\prs{s_1, \ldots, s_k}$
+כאלה הוא
+$N_1 \cdot \ldots \cdot N_k$,
+ולכן
+$N = N_1 \cdot \ldots \cdot N_k$.
+\end{solution}
+
+\chapter{תרגול 6 - הדדיות ריבועית}
+
+\section*{תזכורת}
+
+נזכיר טענה מההרצאה.
+
+\begin{proposition}
+יהי
+$m \in \mbb{N}_+$
+עם פירוק לראשוניים
+\[\text{.} m = 2^e \cdot \prod_{i \in \brs{\ell}} p_i^{e_i}\]
+איבר
+$a \in \mbb{Z} / m\mbb{Z}$,
+הוא ריבוע אם ורק אם מתקיימים התנאים הבאים
+\begin{enumerate}
+\item $a \equiv 1 \mod{8}$
+אם
+$e \geq 3$,
+או
+$a \equiv 1 \mod{4}$
+אם
+$e = 2$.
+\item לכל
+$i \in \brs{\ell}$
+מתקיים
+$a^{\frac{p_i - 1}{2}} \equiv 1 \mod{p_i}$.
+\end{enumerate}
+\end{proposition}
+
+נזכיר גם את ההגדרה הבאה, ומספר תכונות לגביה.
+
+\begin{definition}[סימן לז'נדר]
+עבור
+$p \in \mbb{Z}$
+ראשוני, ועבור
+$a \in \mbb{N}_+$,
+\textbf{סימן לז'נדר}
+$\prs{\frac{a}{p}}$
+שווה:
+\begin{itemize}
+\item[-] $0$ אם $p \mid a$.
+\item[-] $1$ אם $p \nmid a$ וגם $a$ ריבוע מוד $p$.
+\item[-] $1$ אם $p \nmid a$ וגם $a$ אינו ריבוע מוד $p$.
+\end{itemize}
+\end{definition}
+
+\begin{proposition}
+יהיו
+$a,b,p,q \in \mbb{Z}$
+עבור
+$p,q$
+ראשוניים חיוביים.
+מתקיים:
+\begin{enumerate}
+\item $a^{\frac{p-1}{2}} \equiv \prs{\frac{a}{p}} \mod{p}$.
+\item $\prs{\frac{ab}{p}} = \prs{\frac{a}{p}} \prs{\frac{b}{p}}$.
+\item אם
+$a \equiv b \mod{p}$
+אז
+$\prs{\frac{a}{p}} = \prs{\frac{b}{p}}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{theorem}
+יהיו
+$p,q$
+ראשוניים אי־זוגיים חיוביים שונים. מתקיים
+\begin{align*}
+\prs{\frac{2}{p}} &= \prs{-1}^{\frac{p^2 - 1}{8}} \\
+\text{.} \prs{\frac{p}{q}} \prs{\frac{q}{p}} &= \prs{-1}^{\frac{p-1}{2} \cdot \frac{q-1}{2}}
+\end{align*}
+\end{theorem}
+
+\begin{corollary}
+אם
+$q \equiv 1 \mod{4}$
+או
+$p \equiv 1 \mod{4}$
+אז
+\[\text{.}\prs{\frac{p}{q}} = \prs{\frac{q}{p}}\]
+אחרת,
+\[\text{.} \prs{\frac{p}{q}} = - \prs{\frac{q}{p}}\]
+\end{corollary}
+
+\section*{תרגילים}
+
+\begin{exercisechap}[פרק 5, תרגיל 1]
+חשבו את הביטויים הבאים בעזרת הטענה והמשפט.
+\begin{enumerate}
+\item $\prs{\frac{5}{7}}$
+\item $\prs{\frac{3}{11}}$
+\item $\prs{\frac{6}{13}}$
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item
+\begin{align*}
+\prs{\frac{5}{7}} &= \prs{\frac{7}{5}}
+\\&= \prs{\frac{2}{5}}
+\\&= \prs{-1}^{\frac{5^2 - 1}{8}}
+\\&= \prs{-1}^3
+\\&= -1
+\end{align*}
+\item
+\begin{align*}
+\prs{\frac{3}{11}} &= - \prs{\frac{11}{3}}
+\\&= - \prs{\frac{2}{3}}
+\\&= - \prs{-1}^{\frac{3^2 - 1}{8}}
+\\&= 1
+\end{align*}
+\item
+\begin{align*}
+\prs{\frac{6}{13}} &= \prs{\frac{2}{13}} \prs{\frac{3}{13}}
+\\&= \prs{-1}^{\frac{13^2 - 1}{8}} \prs{\frac{13}{3}}
+\\&=  \prs{\frac{13}{3}}
+\\&= \prs{\frac{1}{3}}
+\\&= 1
+\end{align*}
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}[פרק 5, תרגיל 2]
+הראו שמספר הפתרונות של המשוואה
+$x^2 \equiv a \mod{p}$
+הוא
+$1 + \prs{\frac{a}{p}}$.
+\end{exercisechap}
+
+\begin{solution}
+נפריד למקרים.
+
+\begin{enumerate}
+\item אם
+$p \mid a$,
+הפתרון היחיד הוא
+$x = 0$,
+וגם
+$\prs{\frac{a}{p}} = 0$,
+לכן מספר הפתרונות הוא
+$1 + \prs{\frac{a}{p}} = 1$.
+
+\item אם
+$p \nmid a$
+ו־%
+$a$
+ריבוע מוד
+$p$,
+יש שני פתרונות למשוואה, וגם
+$\prs{\frac{a}{p}} = 1$.
+
+\item אם
+$p \nmid a$
+ו־%
+$a$
+אינו ריבוע מוד
+$p$,
+אין פתרונות למשוואה, וגם
+$\prs{\frac{a}{p}} = -1$.
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}[פרק 5, תרגיל 3]
+יהיו
+$a,b,c \in \mbb{Z}$
+כך ש־%
+$p \nmid a$.
+הוכיחו כי מספר הפתרונות של המשוואה
+\[ax^2 + bx + c \equiv 0 \mod{p}\]
+הוא
+$1 + \prs{\frac{b^2 - ac}{p}}$.
+\end{exercisechap}
+
+\begin{solution}
+לפי נוסחאת השורשים, פתרונות המשוואה הם איברי
+\[\text{.} \set{-b \pm \sqrt{b^2 - 4ac}}{2a}\]
+גודל הקבוצה הזאת הוא מספר השורשים של
+$b^2 - 4ac$,
+וזה שווה לפי התרגיל הקודם
+$1 + \prs{\frac{b^2 - ac}{p}}$.
+\end{solution}
+
+\begin{exercisechap}[פרק 5, תרגיל 4]
+הוכיחו כי
+\begin{align*}
+\text{.} \sum_{a = 1}^{p-1} \prs{\frac{a}{p}} = 0
+\end{align*}
+\end{exercisechap}
+
+\begin{proof}
+ההעתקה
+\begin{align*}
+\phi \colon \prs{\mbb{Z}/p\mbb{Z}}^\times \to \prs{\mbb{Z}/p\mbb{Z}}^\times
+x &\mapsto x^2
+\end{align*}
+משרה איזומורפיזם של חבורות
+\begin{align*}
+\text{.} \prs{\mbb{Z} / p\mbb{Z}} / \set{\pm 1} \cong \set{a^2}{a \in \prs{\mbb{Z} / p\mbb{Z}}}
+\end{align*}
+לכן, אם נסמן
+\[S_p \coloneqq \set{a^2}{a \in \prs{\mbb{Z} / p\mbb{Z}}}\]
+נקבל כי
+$\abs{S_p} = \frac{p-1}{2}$.
+אז
+\begin{align*}
+\sum_{a=1}^{p-1} \prs{\frac{a}{p}} &= \sum_{a \in S_p} \prs{\frac{a}{p}} + \sum_{a \in \brs{p-1} \setminus S_p} \prs{\frac{a}{p}}
+\\&=
+\sum_{a \in S_p} 1 + \sum_{a \in \brs{p-1} \setminus S_p} \prs{-1}
+\\&= \frac{p-1}{2} - \frac{p-1}{2}
+\\\text{,}\hphantom{\sum_{a=1}^{p-1} \prs{\frac{a}{p}}}&= 0
+\end{align*}
+כנדרש.
+\end{proof}
+
+\begin{exercisechap}[פרק 5, תרגיל 5]
+עבור
+$a,b \in \mbb{Z}$
+עבורם
+$p \nmid a$,
+הראו כי
+\[\text{.} \sum_{k=0}^{p-1} \prs{\frac{ak + b}{p}} = 0\]
+\end{exercisechap}
+
+\begin{solution}
+עבור
+$k_1, k_2 \in \set{0, \ldots, p-1}$,
+מתקיים
+\begin{align*}
+ak_1 + b \equiv ak_2 + b \mod{p}
+\end{align*}
+אם ורק אם
+\begin{align*}
+\text{,} ak_1 \equiv ak_2 \mod{p}
+\end{align*}
+וכיוון ש־%
+$p \mid p$
+נקבל שזה מתקיים אם ורק אם
+$k_1 = k_2$.
+לכן
+$b \mod{p}, a + b \mod{p}, 2a + b \mod{p}, \ldots, \prs{p-1}a + b \mod{p}$
+הם בדיוק איברי
+$\mbb{Z}/p\mbb{Z}$,
+כאשר כל אחד מופיע פעם אחת.
+כיוון ש־%
+$\prs{\frac{0}{p}} = 0$,
+נקבל מהתרגיל הקודם את הנדרש.
+\end{solution}
+
+\begin{exercisechap}[פרק 5, תרגיל 6]
+הראו כי מספר הפתרונות של המשוואה
+\[x^2 - y^2 \equiv a \mod{p}\]
+הוא
+\[\text{.} \sum_{k=0}^{p-1} \prs{1 + \prs{\frac{k^2 + a}{p}}}\]
+\end{exercisechap}
+
+\begin{solution}
+נכתוב את המשוואה בתור
+\[\text{.} x^2 \equiv y^2 + a \mod{p}\]
+אז עבור
+$y = k$
+מספר הפתרונות של המשוואה הוא מספר הפתרונות של המשוואה
+\[x^2 \equiv k^2 + a \mod{p}\]
+וראינו שזה שווה
+$1 + \prs{\frac{k^2 + a}{p}}$.
+\end{solution}
+
+\begin{exercisechap}[פרק 5, תרגיל 7]
+הראו על ידי חישוב ישיר שמספר הפתרונות של המשוואה
+\[x^2 - y^2 \equiv a \mod{p}\]
+הוא
+$p-1$
+אם
+$p \nmid a$
+או
+$2p-1$
+אם
+$p \mid a$.
+
+\textbf{רמז:}
+סמנו
+$u = x+y, v = x-y$.
+\end{exercisechap}
+
+\begin{solution}
+עם הסימונים שהוצעו, נקבל שהמשוואה היא באופן שקול
+\[\text{.} uv \equiv a \mod{p}\]
+
+אם
+$p \mid a$,
+מספר הפתרונות הוא מספר הזוגות
+$\prs{u,v}$
+עבורם לפחות אחד מבין
+$u,v$
+שווה
+$0$.
+זה שווה בדיוק
+$2p - 1$
+כי כאשר כל אחד שווה אפס, השני יכול להיות כל ערך ב־%
+$\mbb{Z} / p \mbb{Z}$,
+אבל אז
+$\prs{0,0}$
+נספר פעמיים.
+
+אם
+$p \nmid a$,
+לכל בחירה של
+$u$
+הפיך נקבל כי
+$v \equiv \frac{a}{u}$
+איבר יחיד הפותר את המשוואה. לכן במקרה זה יש
+$p-1$
+פתרונות.
+\end{solution}
+
+\begin{exercisechap}[פרק 5, תרגיל 8]
+היעזרו בשני התרגילים הקודמים כדי להראות כי
+\[\text{.} \sum_{k=0}^{p-1} \prs{\frac{k^2 + a}{p}} = \begin{cases}
+-1 & p \nmid a \\
+p-1 & p \mid a
+\end{cases}\]
+\end{exercisechap}
+
+\begin{solution}
+נניח כי
+$p \nmid a$.
+אז משני התרגילים נקבל כי
+\[\text{,} p + \sum_{k=0}^{p-1} \prs{\frac{k^2 + a}{p}} = \sum_{k=0}^{p-1} \prs{1 + \prs{\frac{k^2 + a}{p}}} = p-1\]
+ואז
+\[\text{.} \sum_{k=0}^{p-1} \prs{\frac{k^2 + a}{p}} = -1\]
+
+נניח כי
+$p \mid a$.
+משני התרגילים נקבל כי
+\[\text{,} p + \sum_{k=0}^{p-1} \prs{\frac{k^2 + a}{p}} = \sum_{k=0}^{p-1} \prs{1 + \prs{\frac{k^2 + a}{p}}} = 2p-1\]
+ואז
+\[\text{.} \sum_{k=0}^{p-1} \prs{\frac{k^2 + a}{p}} = p-1\]
+\end{solution}
+
+\begin{exercisechap}[פרק 5, תרגיל 10]
+יהיו
+$r_1, \ldots, r_{\frac{p-1}{2}}$
+הריבועים ההפיכים מוד
+$p$.
+הראו כי
+\[
+\text{.} \prod_{i \in \brs{\frac{p-1}{2}}} r_i = \begin{cases}
+1 & p \equiv 3 \mod{4} \\
+-1 & p \equiv 1 \mod{4}
+\end{cases}
+\]
+\end{exercisechap}
+
+\begin{solution}
+נרצה לחשב את הביטוי
+\[\text{.} P \coloneqq \prod_{k = 1}^{\frac{p-1}{2}} k^2\]
+נשים לב כי
+$k = -\prs{p-k}$,
+לכן
+$k^2 = \prs{-1} k \prs{p-k}$
+לכל
+$k \in \mbb{Z}/p\mbb{Z}$.
+אז
+\begin{align*}
+P &= \prs{-1}^{\frac{p-1}{2}} \cdot \prod_{k = 1}^{\frac{p-1}{2}} k \prs{p-k}
+\\&= \prs{-1}^{\frac{p-1}{2}} \cdot \prod_{k=1}^{p-1} k
+\\&= \prs{-1}^{\frac{p-1}{2}} \cdot \prs{k-1}!
+\\&= \prs{-1}^{\frac{p+1}{2}}
+\end{align*}
+כאשר בשוויון האחרון השתמשנו במשפט ווילסון.
+ביטוי זה שווה
+$1$
+אם
+$p \equiv 3 \mod{4}$
+או
+$-1$
+אם
+$p \equiv 1 \mod{4}$.
+\end{solution}
+
+\begin{exercisechap}[פרק 5, תרגיל 11]
+יהי
+$p > 3$
+ראשוני עבורו
+$p \equiv 3 \mod{4}$
+וכך שגם
+$q \coloneqq 2p + 1$
+ראשוני.
+הראו כי
+$2^{p-1}$
+אינו ראשוני.
+
+\textbf{רמז:}
+הראו כי
+$q \mid 2^{p-1}$.
+\end{exercisechap}
+
+\begin{solution}
+נכתוב
+$p = 4k + 3$
+עבור
+$k \in \mbb{N}_+$.
+אז
+\[\text{.} q = 2p+1 = 8k + 7 \equiv -1 \mod{8}\]
+לכן
+\[\prs{\frac{2}{q}} = \prs{-1}^{\frac{q^2 - 1}{8}} = 1\]
+אז
+\[2^{\frac{q-1}{2}} \equiv 1 \mod{q}\]
+כלומר
+\[\text{.} 2^p \equiv 1 \mod{q}\]
+נקבל כי
+$q \mid 2^p - 1$,
+ולכן
+$2^p - 1$
+אינו ראשוני.
+\end{solution}
+
+
 \printbibliography
 \end{document}

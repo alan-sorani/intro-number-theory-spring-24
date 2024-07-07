@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.3.16)  30 JUN 2024 12:19
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.3.16)  7 JUL 2024 15:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2065,9 +2065,32 @@ LaTeX Info: Redefining \ttfamily on input line 382.
 פרק 3.
 [9
 
-]
+] [10]
+פרק 4.
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
+input line 969.
+Package hyperref Info: bookmark level for unknown theoremx defaults to 0 on inp
+ut line 1026.
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
+put line 1036.
+[11
 
-LaTeX Warning: Empty bibliography on input line 879.
+] [12]
+Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
+line 1153.
+
+Overfull \hbox (8.75354pt too wide) in paragraph at lines 1196--1209
+[]\TU/FrankRuehlCLM(0)/m/n/10 וכיוון ש־$\OML/cmm/m/it/10 p \OMS/cmsy/m/n/10 j \
+OML/cmm/m/it/10 p$ \TU/FrankRuehlCLM(0)/m/n/10 נקבל שזה מתקיים אם ורק אם $\OML/
+cmm/m/it/10 k[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 k[]$\TU/FrankRuehlCLM(0)/m/n
+/10 . לכן $\OML/cmm/m/it/10 b [] ; a \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 b [] ; 
+\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 a \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 b [] ; [
+] ; [] a \OT1/cmr/m/n/10 +$[]
+ []
+
+[13] [14]
+
+LaTeX Warning: Empty bibliography on input line 1380.
 
 \tf@thm=\write8
 \openout8 = `number_theory_recitations.thm'.
@@ -2122,7 +2145,7 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[10] (./number_theory_recitations.aux Setting \if@calendar@hebrew
+[15] (./number_theory_recitations.aux Setting \if@calendar@hebrew
 Setting \if@calendar@hebrew
 LaTeX Info: Redefining \rmfamily on input line 21.
 LaTeX Info: Redefining \sffamily on input line 21.
@@ -2131,18 +2154,18 @@ LaTeX Info: Redefining \ttfamily on input line 21.
 Setting \if@calendar@hebrew)
 Package rerunfilecheck Info: File `number_theory_recitations.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 74C06D8D3DAEDC02DD5CD1E12145A6B9;1120.
+(rerunfilecheck)             Checksum: 35C093CB438E56F3B5848A7D1D23C138;1349.
 Package logreq Info: Writing requests to 'number_theory_recitations.run.xml'.
 \openout1 = `number_theory_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43113 strings out of 476191
- 916095 string characters out of 5812072
- 1849007 words of memory out of 5000000
- 63079 multiletter control sequences out of 15000+600000
- 477240 words of font info for 97 fonts, out of 8000000 for 9000
+ 43123 strings out of 476191
+ 916386 string characters out of 5812072
+ 1853257 words of memory out of 5000000
+ 63087 multiletter control sequences out of 15000+600000
+ 477256 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,19n,118p,1297b,878s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on number_theory_recitations.pdf (14 pages).
+Output written on number_theory_recitations.pdf (19 pages).
