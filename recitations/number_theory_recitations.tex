@@ -1339,6 +1339,8 @@ $-1$
 $p \equiv 1 \mod{4}$.
 \end{solution}
 
+\chapter{תרגול 7 - הדדיות }
+
 \begin{exercisechap}[פרק 5, תרגיל 11]
 יהי
 $p > 3$
@@ -1376,6 +1378,507 @@ $2^p - 1$
 אינו ראשוני.
 \end{solution}
 
+\begin{exercisechap}[פרק 5, תרגיל 16]
+מיצאו בעזרת הדדיות ריבועית את הראשוניים עבורם $7$ הוא ריבוע ב־%
+$\mbb{Z} / p \mbb{Z}$.
+\end{exercisechap}
+
+\begin{solution}
+ראשית, $p = 2$
+עונה על הדרישה כי
+$7 \equiv 1 \mod{2}$.
+נניח בהמשך כי
+$p$
+אי־זוגי.
+
+מתקיים כי
+$7$
+ריבוע מוד
+$p$
+אם ורק אם
+$p = 7$
+או
+$p \neq 7$
+וגם
+$\prs{\frac{7}{p}} = 1$.
+נניח כי
+$p \neq 7$.
+לפי הדדיות ריבועית,
+\begin{align*}
+\prs{\frac{7}{p}} &= \prs{-1}^{\frac{7-1}{2} \cdot \frac{p-1}{2}} \prs{\frac{p}{7}}
+\\
+\text{.} \hphantom{\prs{\frac{7}{p}}}
+&=
+\prs{-1}^{\frac{3 \prs{p-1}}{2}} \prs{\frac{p}{7}}
+\end{align*}
+אם
+$p \equiv 1 \mod{4}$
+נקבל כי
+$\frac{3 \prs{p-1}}{2}$
+זוגי ואז
+\begin{align*}
+\text{.} \prs{\frac{7}{p}} = \prs{\frac{p}{7}}
+\end{align*}
+אחרת, נקבל כי
+\[\text{.} \prs{\frac{7}{p}} = - \prs{\frac{p}{7}}\]
+
+לכן התשובה היא ראשוניים
+$p \in \set{2,7}$
+וגם
+$p \notin \set{2,7}$
+עבורם
+\[\prs{\frac{p}{7}} = 1, \quad p \equiv 1 \mod{4}\]
+או
+\[\text{.}\prs{\frac{p}{7}} = -1, \quad p \equiv 3 \mod{4}\]
+
+נחפש את ערכי
+$p$
+שמקיימים זאת.
+מוד
+$7$
+מתקיים
+\begin{align*}
+1^2 &= 1 \\
+2^2 &= 4 \\
+3^2 &= 2 \\
+4^2 &= 2 \\
+5^2 &= 4 \\
+\text{.} 6^2 &= 1
+\end{align*}
+
+נחפש קודם ערכי
+$p$
+עבורם
+$\prs{\frac{p}{7}} = 1, \quad p \equiv 1 \mod{4}$.
+נכתוב
+$a \equiv p \mod{7} \in \set{1,2,4}$.
+מתקיים
+$\gcd\prs{4,7} = 1$
+ונוכל לכתוב
+$1 = 2 \cdot 4 + \prs{-1} \cdot 7$.
+אז
+$p$
+שפותר את המערכת
+\begin{align*}
+p &\equiv 1 \mod{4} \\
+p &\equiv a \mod{7}
+\end{align*}
+הוא כל ראשוני מהצורה
+\begin{enumerate}
+\item $1 + 28k$
+אם
+$a = 1$.
+\item $9 + 28k$
+אם
+$a = 2$.
+\item $25 + 28k$
+אם
+$a = 4$.
+\end{enumerate}
+
+באופן דומה, עבור
+$p \equiv 3 \mod{4}$
+נצטרך למצוא פתרונות ראשוניים למערכת
+\begin{align*}
+p &\equiv 3 \mod{4} \\
+p &\equiv a \mod{7}
+\end{align*}
+כאשר
+$a \in \set{3,5,6}$.
+אלו יהיו כל הראשוניים מהצורה
+\begin{enumerate}
+\item $3 + 28k$
+עבור
+$a = 3$.
+\item $19 + 28k$
+עבור
+$a = 5$.
+\item $27 + 28k$
+עבור
+$a = 6$.
+\end{enumerate}
+\end{solution}
+
+\begin{definition}[סימן יקובי]
+עבור
+$b$
+חיובי אי־זוגי עם פירוק לראשוניים
+$b = p_1^{a_1} \cdot \ldots p_k^{a_k}$,
+נגדיר את
+\emph{סימן יקובי}
+$\prs{\frac{a}{b}}$
+בתור
+\begin{align*}
+\text{.} \prs{\frac{a}{b}} \coloneqq \prs{\frac{a}{p_i}}^{a_i} \cdot \ldots \cdot \prs{\frac{a}{p_k}}^{a_k}
+\end{align*}
+\end{definition}
+
+\begin{proposition}
+\begin{enumerate}
+\item $\prs{\frac{a_1}{b}} = \prs{\frac{a_2}{b}}$
+אם
+$a_1 \equiv a_2 \mod{b}$.
+\item $\prs{\frac{a_1 a_2}{b}} = \prs{\frac{a_1}{b}} \prs{\frac{a_2}{b}}$.
+\item $\prs{\frac{a}{b_1 b_2}} = \prs{\frac{a}{b_1}} \prs{\frac{a}{b_2}}$
+\end{enumerate}
+\end{proposition}
+
+\begin{proposition}
+\begin{enumerate}
+\item $\prs{\frac{-1}{b}} = \prs{-1}^{\frac{b-1}{2}}$.
+\item $\prs{\frac{2}{b}} = \prs{-1}^{\frac{b^2 - 1}{8}}$.
+\item אם
+$a,b$
+שניהם אי זוגיים,
+\begin{align*}
+\text{.} \prs{\frac{a}{b}} \prs{\frac{b}{a}} = \prs{-1}^{\frac{a - 1}{2} \cdot \frac{b-1}{2}}
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+\begin{exercisechap}[פרק 5, תרגיל 18]
+יהי
+$D$
+שלם חיובי חסר־ריבועים. הראו שיש
+$b$
+שלם חיובי זר ל־%
+$D$
+עבורו
+$\prs{\frac{b}{D}} = -1$.
+\end{exercisechap}
+
+\begin{solution}
+נכתוב
+$D = \prod_{i \in \brs{k}} p_i$
+עבור
+$p_i$
+ראשוניים זרים בזוגות.
+אז
+\begin{align*}
+\text{.} \frac{b}{D} = \prod_{i \in \brs{k}} \prs{\frac{b}{p_i}}
+\end{align*}
+יהיו
+$a_i \in \mbb{Z} / p_i \mbb{Z}$
+שונים מאפס כך ש־%
+$a_1$
+ריבוע ב־%
+$\mbb{Z} / p_1 \mbb{Z}$
+ו־%
+$a_i$
+אינו ריבוע ב־%
+$\mbb{Z} / p_i \mbb{Z}$
+לכל
+$i \geq 2$.
+ממשפט השאריות הסיני קיים
+$b \in \mbb{Z}$
+עבורו
+$b \equiv a_i \mod{p_i}$
+לכל
+$i \in \brs{k}$.
+אז
+\[\text{.} \prs{\frac{b}{p_i}} \equiv \prs{\frac{a_i}{p_i}} = \prs{-1}^{\delta_{i,1}}\]
+לכן
+\begin{align*}
+\text{,} \frac{b}{D} = \prod_{i \in \brs{k}} \prs{\frac{b}{p_i}} = -1
+\end{align*}
+כנדרש.
+\end{solution}
+
+\begin{exercisechap}[פרק 5, תרגיל 19]
+תהי
+$\prs{a_1, \ldots, a_{\phi\prs{D}}}$
+מערכת שאריות מצומצמת מוד
+$D$.
+ת שאריות מצומצמת מוד
+$D$.
+
+\begin{enumerate}
+\item הראו כי
+\begin{align*}
+\text{.} \sum_{i \in \brs{\phi\prs{D}}} \prs{\frac{a_i}{D}} = 0
+\end{align*}
+
+היזכרו כי לכל
+$a$
+הפיך מוד
+$D$, גם
+$\prs{a a_1, \ldots, a a_{\phi\prs{D}}}$
+מערכת שאריות מצומצמת מוד
+$D$.
+
+\item
+הסיקו כי בדיוק חצי מאיברי
+$\prs{\mbb{Z} / D\mbb{Z}}^\times$
+מקיימים
+ $\prs{\frac{a}{D}} = 1$.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item מתקיים
+\begin{align*}
+\text{.} \sum_{i \in \brs{\phi\prs{D}}} \prs{\frac{a_i}{D}} \in \set{1, 0, -1}
+\end{align*}
+ניקח
+$b \in \mbb{Z}$
+עבורו
+$\prs{\frac{b}{D}} = -1$,
+שקיים מהתרגיל הקודם.
+אז
+\begin{align*}
+\sum_{i \in \brs{\phi\prs{D}}} \prs{\frac{a_i}{D}} &=
+\sum_{i \in \brs{\phi\prs{D}}} \prs{\frac{b a_i}{D}}
+\\&=
+\sum_{i \in \brs{\phi\prs{D}}} \prs{\frac{b}{D}} \prs{\frac{a_i}{D}}
+\\&=
+- \sum_{i \in \brs{\phi\prs{D}}} \prs{\frac{a_i}{D}}
+\end{align*}
+ולכן
+\[\text{,} \sum_{i \in \brs{\phi\prs{D}}} \prs{\frac{a_i}{D}} = 0\]
+כנדרש.
+
+\item
+כיוון שכל הגורמים
+$\prs{\frac{a_i}{D}}$
+בסכום הם אחד מבין
+$1, -1$,
+וכיוון ש־%
+$\phi\prs{D} < D$,
+נקבל כי הסכום יכול להיות אפס אם ורק אם חצי מהגורמים בו שווים
+$1$
+וחצי מהם שווים
+$-1$.
+כיוון שמחלקות השקילות של
+$a_1, \ldots, a_{\phi\prs{D}}$
+הן איברי
+$\mbb{Z} / D\mbb{Z}$,
+נקבל את הנדרש.
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}[פרק 5, תרגיל 20]
+יהיו
+$a_1, \ldots, a_{\phi\prs{D} / 2} \in \mbb{Z} / D\mbb{Z}$
+האיברים עבורם
+$\prs{\frac{a_i}{D}} = 1$.
+יהי
+$p \nmid D$
+ראשוני שמקיים
+$p \equiv 1 \mod{4}$.
+הראו כי
+$D$
+שארית ריבועית מוד
+$p$
+אם ורק אם קיים
+$i \in \brs{\phi\prs{D}}$
+עבורו
+$p \equiv a_i \mod{D}$.
+\end{exercisechap}
+
+\begin{solution}
+$D$
+שארית ריבועית מוד
+$p$
+אם ורק אם
+$\prs{\frac{D}{p}} = 1$.
+
+נניח כי
+$p \equiv a_i \mod{D}$
+עבור איזהו
+$i \in \brs{\phi\prs{D} / 2}$.
+אז
+\begin{align*}
+\text{.} \prs{\frac{p}{D}} = \prs{\frac{a_i}{D}} = 1
+\end{align*}
+כיוון ש־%
+$p \equiv 1 \mod{4}$,
+נקבל כי
+$\frac{p-1}{2}$
+זוגי ולכן
+\begin{align*}
+\text{.} \prs{\frac{D}{p}} = \prs{\frac{p}{d}} = 1
+\end{align*}
+
+נניח כעת כי
+$p \not\equiv a_i \mod{D}$
+לאף
+$i \in \brs{\phi\prs{D}/2}$.
+אז
+$\prs{\frac{p}{D}} = -1$
+ובאותו אופן נקבל כי
+$\prs{\frac{D}{p}} = \prs{\frac{p}{D}} = -1$,
+לכן
+$D$
+לא שארית ריבועית מוד
+$p$.
+\end{solution}
+
+\chapter{תרגול 8 - עוד הדדיות}
+
+\begin{exercisechap}[פרק 5, תרגיל 21]
+השתמשו בשיטה משני התרגילים הקודמים כדי למצוא את כל הראשוניים
+$p$
+עבורם
+$21$
+הוא שארית ריבועית מוד
+$p$.
+\end{exercisechap}
+
+\begin{solution}
+ההפיכים מוד
+$21$
+הם המספרים מ־%
+$1$
+עד
+$20$
+שזרים ל־%
+$3,7$.
+אלו
+$1, 2, 4, 5, 8, 10, 11, 13, 16, 17, 19, 20$.
+
+מתקיים
+\begin{align*}
+\prs{\frac{1}{21}} &= \prs{\frac{1}{3}} \prs{\frac{1}{7}}
+\\&= 1
+\\
+\prs{\frac{2}{21}} &= \prs{-1}^{\frac{21^2 - 1}{8}}
+\\&= \prs{-1}^{55}
+\\&= -1
+\\
+\prs{\frac{4}{21}} &= \prs{\frac{2}{21}}^2
+\\&=
+1
+\\
+\prs{\frac{5}{21}} &= \prs{\frac{21}{5}}
+\\&=
+\prs{\frac{1}{5}}
+\\&=
+1
+\\
+\prs{\frac{8}{21}} &= \prs{\frac{2}{21}}^3
+\\&=
+-1
+\\
+\prs{\frac{10}{21}} &= \prs{\frac{2}{21}} \prs{\frac{5}{21}}
+\\&= -1 \cdot 1
+\\&= -1
+\\
+\prs{\frac{11}{21}} &= \prs{\frac{21}{11}}
+\\&= \prs{\frac{10}{11}}
+\\&= \prs{\frac{2}{11}} \prs{\frac{3}{11}}
+\\&= - \prs{-1}^{\frac{11^2 - 1}{8}} \prs{\frac{11}{3}}
+\\&= - \prs{-1}^{15} \prs{\frac{2}{3}}
+\\&= \prs{-1}^3
+\\&= -1
+\end{align*}
+\begin{align*}
+\prs{\frac{13}{21}} &= \prs{\frac{21}{13}}
+\\&= \prs{\frac{8}{13}}
+\\&= \prs{\frac{2}{13}}^3
+\\&= \prs{-1}^{3 \cdot \frac{13^2 - 1}{8}}
+\\&= \prs{-1}^{3 \cdot 21}
+\\&= -1
+\\
+\prs{\frac{16}{21}} &= \prs{\frac{2}{21}}^4
+\\&= 1
+\\
+\prs{\frac{17}{21}} &= \prs{\frac{21}{17}}
+\\&= \prs{\frac{4}{17}}
+\\&= \prs{\frac{2}{17}}^2
+\\&= 1
+\\
+\prs{\frac{19}{21}} &= \prs{\frac{21}{19}}
+\\&= \prs{\frac{2}{19}}
+\\&= \prs{-1}^{\frac{19^2 - 1}{8}}
+\\&= \prs{-1}^{45}
+\\&= -1
+\\
+\prs{\frac{20}{21}} &= \prs{\frac{2}{21}} \prs{\frac{10}{21}}
+\\&= \prs{-1}^2
+\\&= 1
+\end{align*}
+ולכן האיברים
+$a \in \mbb{Z} / 21 \mbb{Z}$
+עבורם
+$\prs{\frac{a}{21}} = 1$
+הם
+$1, 4, 5, 16, 17, 20$.
+נשים לב שזה מספר האיברים האלו שאנו אמורים לקבל, כי
+$\frac{\phi\prs{21}}{2} = \frac{12}{2} = 6$.
+
+לכן
+$21$
+שארית ריבועית מוד
+$p$
+אם ורק אם
+$\bar{p} \mod{21} \in \set{1,4,5,16,17,20}$.
+\end{solution}
+
+\begin{exercisechap}[פרק 5, תרגיל 23]
+יהי
+$p \equiv 1 \mod{4}$
+ראשוני.
+
+\begin{enumerate}
+\item הראו שקיימים
+$s,t \in \mbb{Z}$
+עבורם
+$pt = 1 + s^2$.
+
+\item הסיקו כי
+$p$
+אינו ראשוני ב־%
+$\mbb{Z}\brs{i}$.
+
+זיכרו כי יש ב־%
+$\mbb{Z}\brs{i}$
+פירוק יחיד לראשוניים.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item
+מכך ש־%
+$p \equiv 1 \mod{4}$
+נקבל כי
+\[\prs{\frac{-1}{p}} = \prs{-1}^{\frac{p-1}{2}} = 1\]
+ולכן
+$\prs{-1}$
+ריבוע מוד
+$p$.
+לכן יש
+$s \in \mbb{Z}$
+עבורו
+$s^2 \equiv -1 \mod{p}$,
+כלומר
+$s^2 + 1 \equiv 0 \mod{p}$,
+כלומר קיים
+$t \in \mbb{Z}$
+עבורו
+$pt = s^2 + 1$.
+
+\item 
+נקבל כי עבור
+$s,t$
+שמצאנו מתקיים
+$pt = \prs{s+i}\prs{s-i}$.
+אם
+$p$
+היה ראשוני ב־%
+$\mbb{Z}\brs{i}$
+היינו מקבלים
+$p \mid s+i$
+או
+$p \mid s-i$.
+אבל אז
+$p \mid 1$
+או
+$p \mid -1$,
+מה שלא יתכן.
+\end{enumerate}
+\end{solution}
 
 \printbibliography
 \end{document}
