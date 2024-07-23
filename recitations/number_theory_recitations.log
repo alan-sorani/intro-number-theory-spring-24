@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.3.16)  16 JUL 2024 11:50
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.3.16)  21 JUL 2024 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2092,19 +2092,26 @@ cmm/m/it/10 k[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 k[]$\TU/FrankRuehlCLM(0)/m/n
 פרק 5.
 [15
 
-] [16] [17]
+] [16] Excluding 'comment' comment. [17]
 פרק 6.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18
+[18
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2036.
 
-LaTeX Warning: Empty bibliography on input line 1883.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 2036.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2036.
+
+[19] Excluding 'comment' comment. [20]
+
+LaTeX Warning: Empty bibliography on input line 2239.
 
 \tf@thm=\write8
 \openout8 = `number_theory_recitations.thm'.
@@ -2159,7 +2166,7 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[20] (./number_theory_recitations.aux Setting \if@calendar@hebrew
+[21] (./number_theory_recitations.aux Setting \if@calendar@hebrew
 Setting \if@calendar@hebrew
 LaTeX Info: Redefining \rmfamily on input line 21.
 LaTeX Info: Redefining \sffamily on input line 21.
@@ -2168,18 +2175,18 @@ LaTeX Info: Redefining \ttfamily on input line 21.
 Setting \if@calendar@hebrew)
 Package rerunfilecheck Info: File `number_theory_recitations.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 21EF7F2AAAEBB7E570251E940A73B86A;1719.
+(rerunfilecheck)             Checksum: 762AFE0ABA88E4142C21DDE0BC6F1125;2129.
 Package logreq Info: Writing requests to 'number_theory_recitations.run.xml'.
 \openout1 = `number_theory_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43123 strings out of 476191
- 916386 string characters out of 5812072
- 1853669 words of memory out of 5000000
- 63087 multiletter control sequences out of 15000+600000
- 477256 words of font info for 99 fonts, out of 8000000 for 9000
+ 43134 strings out of 476191
+ 916569 string characters out of 5812072
+ 1854105 words of memory out of 5000000
+ 63097 multiletter control sequences out of 15000+600000
+ 478974 words of font info for 107 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,19n,118p,1297b,878s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on number_theory_recitations.pdf (24 pages).
+Output written on number_theory_recitations.pdf (25 pages).

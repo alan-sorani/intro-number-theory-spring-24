@@ -1714,7 +1714,7 @@ $D$
 $p$.
 \end{solution}
 
-\chapter{תרגול 8 - עוד הדדיות}
+\begin{comment}
 
 \begin{exercisechap}[פרק 5, תרגיל 21]
 השתמשו בשיטה משני התרגילים הקודמים כדי למצוא את כל הראשוניים
@@ -1878,6 +1878,362 @@ $p \mid 1$
 $p \mid -1$,
 מה שלא יתכן.
 \end{enumerate}
+\end{solution}
+\end{comment}
+
+\chapter{תרגול 8}
+
+\section{מספרים אלגבריים וסכומי גאוס}
+
+\begin{definition}
+מספר מרוכב
+$\alpha$
+הוא אלגברי אם קיים
+$p\prs{x} \in \mbb{Q}\brs{x}$
+עבורו
+$p\prs{\alpha} = 0$.
+הוא שלם אלגברי אם קיים
+$p \in \mbb{Z}\brs{x}$
+עבורו
+$p\prs{\alpha} = 0$.
+\end{definition}
+
+\begin{proposition}
+אוסף המספרים האלגבריים הוא שדה, ואוסף השלמים האלגבריים הוא חוג.
+\end{proposition}
+
+\begin{proposition}
+לכל
+$\alpha, \beta$
+שלמים אלגבריים, ולכל
+$p$
+ראשונים, מתקיים
+\begin{align*}
+\text{.} \prs{\alpha + \beta}^p \equiv \alpha^p + \beta^p \mod{p}
+\end{align*}
+\end{proposition}
+
+\begin{definition}
+יהי
+$\zeta \coloneqq e^{2 \pi i}{8}$
+שורש יחידה פרימיטיבי מסדר 8.
+עבור בחירה של ראשוני
+$p \in \mbb{N}_+$
+ועבור
+$a \in \brs{p}$,
+נגדיר
+\begin{align*}
+\text{.} g_a \coloneqq \sum_{t \in \brs{p}} \prs{\frac{t}{p}} \zeta^{at}
+\end{align*}
+\end{definition}
+
+\begin{exercisechap}[פרק 6, תרגיל 8]
+יהי
+$\omega \coloneqq e^{\frac{2 \pi i}{3}}$
+שורש יחידה פרימיטיבי מסדר
+$3$.
+הראו כי מתקיים
+$\prs{2 \omega + 1}^2 = -3$,
+וחשבו בעזרת זה את
+$\prs{\frac{-3}{p}}$.
+\end{exercisechap}
+
+\begin{solution}
+ראשית, מתקיים
+\begin{align*}
+\prs{2 \omega + 1}^2 &= 4 \omega^2 + 4 \omega + 1
+\\&= 4 \prs{\bar{\omega} + \omega} + 1
+\\&= 8 \Re{\omega} + 1
+\end{align*}
+וגם
+\begin{align*}
+\text{,} \Re\prs{\omega} = \cos\prs{\frac{2 \pi}{3}} = -\frac{1}{2}
+\end{align*}
+לכן
+\[\text{.} \prs{2 \omega + 1}^2 = 1 - 4 = -3\]
+
+כעת, נסמן
+\[\upsilon \coloneqq 2 \omega + 1\]
+בדומה לחישוב מההרצאה עבור
+$\prs{\frac{2}{p}}$,
+ונקבל כי
+$\upsilon^2 = -3$.
+לפי טענה מההרצאה,
+\begin{align*}
+\text{,} \prs{\frac{-3}{p}} \equiv \prs{-3}^{\frac{p-1}{2}} \mod{p}
+\end{align*}
+ולכן
+\begin{align*}
+\text{.} \prs{\frac{-3}{p}} &\equiv \upsilon^{p-1} \mod{p}
+\end{align*}
+לכן
+\begin{align*}
+\text{.} \prs{\frac{-3}{p}} \cdot \upsilon \equiv \upsilon^p \mod{p}
+\end{align*}
+מצד שני,
+\begin{align*}
+\upsilon^p &\equiv \prs{2 \omega + 1}^p
+\\& \equiv 2^p \omega^p + 1^p \mod{p}
+\\\text{.} \hphantom{\upsilon^p} & \equiv 2 \omega^p + 1 \mod{p}
+\end{align*}
+
+אז
+\begin{enumerate}
+\item אם
+$p \equiv 0 \mod{3}$
+נקבל כי
+$p = 3$
+ולכן
+$\prs{\frac{-3}{p}} = 0$.
+
+\item אם
+$p \equiv 1 \mod{3}$,
+נקבל כי
+\[\text{.} \upsilon^p = 2 \omega^p + 1 = 2 \omega + 1 = \upsilon\]
+לכן במקרה זה
+$\prs{\frac{-3}{p}} \equiv 1 \mod{p}$
+ולכן
+$\prs{\frac{-3}{p}} = 1$.
+
+\item אם
+$p \equiv 2 \mod{3}$,
+נקבל כי
+\begin{align*}
+\upsilon^p &\equiv 2 \omega^2 + 1 \mod{p}
+\\&\equiv 2 \prs{-1 - \omega} + 1 \mod{p}
+\\&\equiv -2 \omega - 1 \mod{p}
+\\&\equiv - \upsilon \mod{p}
+\end{align*}
+ולכן
+\begin{align*}
+\text{.} \prs{\frac{-3}{p}} = -1
+\end{align*}
+\end{enumerate}
+
+חישוב יראה לנו שמתקיים ממה שהראנו
+$\prs{\frac{-3}{p}} = \prs{\frac{p}{3}}$.
+\end{solution}
+
+\begin{proposition}
+מתקיים
+\begin{align*}
+\text{.} g_a = \prs{\frac{a}{p}} g_1
+\end{align*}
+\end{proposition}
+
+\begin{exercisechap}[פרק 6, תרגיל 10]
+ניעזר בטענה על חישוב
+$g_a$
+ונקבל
+\begin{align*}
+\sum_{a \in \brs{p-1}} g_a &= \sum_{a \in \brs{p-1}} \prs{\frac{a}{p}} g_1
+\\\text{.}\hphantom{\sum_{a \in \brs{p-1}} g_a}&= g_1 \sum_{a \in \brs{p-1}} \prs{\frac{a}{p}}
+\end{align*}
+כיוון שראינו בתרגול שהסכום באגף ימין מתאפס, נקבל כי הסכום הנדרש שווה אפס.
+\end{exercisechap}
+
+\section{סכומי גאוס ויקובי מעל
+$\mbb{F}_p$}
+
+\begin{definition}
+קרקטר כפלי של
+$\mbb{F}_p$
+הוא הומומורפיזם
+\begin{align*}
+\text{.} \chi \colon \mbb{F}_p \to \mbb{C}
+\end{align*}
+במקרה זה נרחיב את
+$\chi$
+ל־%
+$\mbb{F}_p$.
+\end{definition}
+
+\begin{proposition}
+אוסף הקרקטרים הכפליים של
+$\mbb{F}_p$,
+שנסמנו
+$\Omega_p$,
+הוא חבורה ביחס לכפל.
+\end{proposition}
+
+\begin{proposition}
+\begin{enumerate}
+\item
+לכל
+$a \in \mbb{F}_p^\times$
+שונה מ־%
+$1$
+מתקיים
+\begin{align*}
+\text{.} \sum_{\chi \in \Omega_p} \chi\prs{a} = 0
+\end{align*}
+\item
+לכל
+$\chi \in \Omega_p$
+מתקיים
+\begin{align*}
+\text{.} \sum_{t \in \mbb{F}_p} \chi\prs{t} = \begin{cases}
+0 & \chi \neq 1 \\
+p & \chi = 1
+\end{cases}
+\end{align*}
+\end{enumerate}
+\end{proposition}
+
+\begin{definition}[סכום גאוס]
+עבור
+$\chi \in \Omega_p, a \in \mbb{F}_p$,
+נגדיר
+\begin{align*}
+\text{,} g_a\prs{\chi} = \sum_{t \in \mbb{F}_p} \chi\prs{t} \zeta^{at}
+\end{align*}
+כאשר
+$\zeta \coloneqq e^{\frac{2 \pi i}{p}}$.
+
+נסמן
+$g = g_1$.
+\end{definition}
+
+\begin{proposition}
+מתקיים
+\begin{align*}
+\text{.} g_a =
+\begin{cases}
+	\chi\prs{a^{-1}} g\prs{\chi} & a \neq 0, \chi \neq 1 \\
+	p & a = 0, \chi = 1 \\
+	0 & \text{otherwise}
+\end{cases}
+\end{align*}
+\end{proposition}
+
+\begin{definition}[סכום יקובי]
+עבור
+$\chi, \lambda \in \Omega_p$,
+נסמן
+\[\text{.} J\prs{\chi, \lambda} = \sum_{a+b = 1} \chi\prs{a} \lambda\prs{b}\]
+\end{definition}
+
+\begin{proposition}
+מתקיים
+\begin{align*}
+\text{.} J\prs{\chi, \lambda} =
+\begin{cases}
+	p & \chi = \lambda = 1 \\
+	-\chi\prs{-1} & \lambda = \chi^{-1} \\
+	\frac{g\prs{\chi} g\prs{\lambda}}{g\prs{\chi \lambda}} & \chi \lambda \neq 1
+\end{cases}
+\end{align*}
+\end{proposition}
+
+\begin{exercisechap}[פרק 8, תרגיל 3]
+יהי
+$\chi \in \Omega_p \setminus \set{1}$,
+ויהי
+$\rho \in \Omega_p$
+מסדר
+$2$.
+הראו כי
+\begin{align*}
+\text{.} \sum_{t \in \mbb{F}_p} \chi\prs{1 - t^2} = J\prs{\chi, \rho}
+\end{align*}
+
+\textbf{רמז:}
+היעזרו במשוואה
+$N\prs{x^2 = a} = 1 + \rho\prs{a}$
+כאשר
+$N\prs{E}$
+הוא מספר הפתרונות למשוואה
+$E$
+מעל
+$\mbb{F}_p$.
+\end{exercisechap}
+
+\begin{solution}
+נחשב בעזרת הרמז.
+\begin{align*}
+J\prs{\chi, \rho} &= \sum_{a+b = 1} \chi\prs{a} \rho\prs{b}
+\\&= \sum_{a+b = 1} \chi\prs{a} \prs{N\prs{x^2 = b} - 1}
+\\&= \sum_{a + b = 1} \chi\prs{a} N\prs{x^2 = b} - \sum_{a+b = 1} \chi\prs{a}
+\end{align*}
+כיוון ש־%
+$\chi \neq 1$,
+נקבל כי
+\[\text{.} \sum_{a+b} \chi\prs{a} = \sum_{a \in \mbb{F}_p} \chi\prs{a} = 0\]
+אז
+\begin{align*}
+J\prs{\chi, \rho} &= \sum_{a + b = 1} \chi\prs{a} N\prs{x^2 = b}
+\\&= \chi\prs{1} + \sum_{\substack{a + b = 1 \\ \prs{\frac{b}{p}} = 1}} \chi\prs{a} N\prs{x^2 = b} + \cancelto{0}{\sum_{\substack{a + b = 1 \\ \prs{\frac{b}{p}} = -1}} \chi\prs{a} N\prs{x^2 = b}}
+\\&= \chi\prs{1} + 2 \sum_{\substack{\prs{\frac{b}{p}} = 1}} \chi\prs{1-b}
+\\&= \chi\prs{1} + \sum_{t \in \mbb{F}_p^\times} \chi\prs{1 - t^2}
+\\ \text{,} \hphantom{J\prs{\chi, \rho}} &= \sum_{t \in \mbb{F}_p} \chi\prs{1 - t^2}
+\end{align*}
+כנדרש.
+\end{solution}
+
+\begin{comment}
+
+\begin{exercisechap}[פרק 8, תרגיל 5]
+יהי
+$\chi \in \Omega_p \setminus \set{1}$,
+ויהי
+$\rho \in \Omega_p$
+מסדר
+$2$.
+יהי
+$a \in \mbb{F}_p^\times$.
+ידוע כי
+\[\text{.} \sum_{t \in \mbb{F}_p} \chi\prs{t\prs{a-t}} = \chi\prs{\frac{a^2}{2^2}} J\prs{\chi, \rho}\]
+הראו שאם
+$\chi^2 \neq 1$,
+מתקיים
+\[\text{.} g\prs{\chi}^2 = \chi\prs{2}^{-2} J\prs{\chi, \rho} g\prs{\chi^2}\]
+
+\textbf{רמז:}
+כיתבו את
+$g\prs{\chi}^2$
+מפורשות והיעזרו בנתון.
+\end{exercisechap}
+
+\begin{solution}
+נחשב.
+\begin{align*}
+g\prs{\chi}^2 &= \prs{\sum_{t \in \mbb{F}_p} \chi\prs{t} \zeta^t} \prs{\sum_{s \in \mbb{F}_p} \chi\prs{s} \zeta^s}
+\\&=
+\sum_{s,t \in \mbb{F}_p} \chi\prs{t} \chi\prs{s} \zeta^{t+s}
+\\&=
+\sum_{k \in \mbb{F}_p} \prs{\sum_{s+t = k} \chi\prs{t} \chi\prs{s}} \zeta^k
+\\&=
+\sum_{k \in \mbb{F}_p} \prs{\sum_{t \in \mbb{F}_p} \chi\prs{t\prs{k-t}}} \zeta^k
+\\&= \sum_{t \in \mbb{F}_p} \chi\prs{-t^2} + \sum_{k \neq 0} \chi\prs{\frac{k^2}{2^2}} J\prs{\chi, \rho} \zeta^k
+\\&=
+\chi\prs{-1} \sum_{t \in \mbb{F}_p} \chi^2\prs{t} + \chi\prs{2}^{-2} J\prs{\chi, \rho} \sum_{k \neq 0} \chi^2\prs{k} \zeta^k
+\\&=
+\chi\prs{2}^{-2} J\prs{\chi, \rho} g\prs{\chi^2}
+\end{align*}
+\end{solution}
+
+\end{comment}
+
+\begin{exercisechap}[פרק 8, תרגיל 6]
+הראו כי עבור
+$\chi \in \Omega_p$
+שמקיים
+$\chi^2 \neq 1$,
+ועבור
+$\rho \in \Omega_p$
+מסדר
+$2$,
+מתקיים
+$J\prs{\chi, \chi} = \chi\prs{2}^{-2} J\prs{\chi, \rho}$.
+\end{exercisechap}
+
+\begin{solution}
+המשפט נותן לנו
+$J\prs{\chi, \chi} = \frac{g\prs{\chi}^2}{g\prs{\chi^2}}$,
+ומהתרגיל הקודם נקבל כי זה שווה
+$\chi\prs{2}^{-2} J\prs{\chi, \rho}$.
+לכן
+\[\text{.} J\prs{\chi, \chi} = \chi\prs{2}^{-2} J\prs{\chi, \rho}\]
 \end{solution}
 
 \printbibliography
